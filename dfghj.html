@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Земляника vs Клубника: в чем разница? | Красивый лендинг</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #fef9f0 0%, #fff5e8 100%);
+            font-family: 'Inter', sans-serif;
+            color: #2e241f;
+            line-height: 1.4;
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f3e5d8;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c05a3b;
+            border-radius: 10px;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+            position: relative;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(192, 90, 59, 0.12);
+            backdrop-filter: blur(4px);
+            padding: 6px 18px;
+            border-radius: 60px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #b2452a;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(192,90,59,0.25);
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #3b2a21, #8b4c33);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero-sub {
+            font-size: 1.2rem;
+            max-width: 680px;
+            margin: 0 auto;
+            color: #5c3e2e;
+            font-weight: 400;
+        }
+        .hero-img-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        .hero-card {
+            background: white;
+            border-radius: 48px;
+            padding: 20px 24px 24px;
+            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            width: 260px;
+            text-align: center;
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(255,255,240,0.6);
+        }
+        .hero-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 35px 50px -18px rgba(160, 70, 40, 0.3);
+        }
+        .hero-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 120px;
+            box-shadow: 0 15px 25px -8px rgba(0,0,0,0.2);
+            margin-bottom: 16px;
+            border: 3px solid #ffe0c0;
+        }
+        .hero-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .straw-title { color: #c04b2c; }
+        .wild-title { color: #6f4e3a; }
+
+        .section {
+            padding: 70px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2e241f;
+        }
+        .section-desc {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+            color: #6b4c3a;
+        }
+        .compare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .compare-card {
+            background: #ffffffd9;
+            backdrop-filter: blur(2px);
+            border-radius: 56px;
+            padding: 30px 28px;
+            box-shadow: 0 15px 35px rgba(100, 50, 20, 0.08);
+            transition: all 0.25s;
+            border: 1px solid rgba(245, 205, 170, 0.5);
+        }
+        .compare-card:hover {
+            background: white;
+            box-shadow: 0 25px 40px -12px rgba(170, 80, 30, 0.2);
+        }
+        .card-icon {
+            font-size: 2.8rem;
+            margin-bottom: 16px;
+        }
+        .compare-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border-left: 5px solid #d96c42;
+            padding-left: 18px;
+        }
+        .feature-list {
+            list-style: none;
+        }
+        .feature-list li {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1rem;
+        }
+        .feature-list i {
+            width: 28px;
+            color: #ca6d48;
+            font-size: 1.2rem;
+        }
+
+        .comparison-table {
+            background: #fff8f0;
+            border-radius: 60px;
+            padding: 30px 30px 40px;
+            box-shadow: 0 20px 35px -8px rgba(0,0,0,0.05);
+            margin-top: 30px;
+            border: 1px solid #f5e2cf;
+        }
+        .table-row {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #f0dfce;
+            padding: 20px 0;
+        }
+        .table-row:last-child {
+            border-bottom: none;
+        }
+        .table-label {
+            flex: 1.2;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: #482e1f;
+        }
+        .table-straw {
+            flex: 1;
+            background: #fff1e4;
+            margin: 0 12px;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+        .table-wild {
+            flex: 1;
+            background: #f5e1cf;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 500;
+        }
+        @media (max-width: 760px) {
+            .table-row { flex-direction: column; gap: 12px; }
+            .table-label { margin-bottom: 6px; }
+            .table-straw, .table-wild { margin: 4px 0; text-align: center; }
+            h1 { font-size: 2.4rem; }
+        }
+
+        .fact-box {
+            background: linear-gradient(120deg, #fff3e6, #fffaf5);
+            border-radius: 48px;
+            padding: 40px 35px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .fact-text {
+            flex: 2;
+        }
+        .fact-text h3 {
+            font-size: 1.9rem;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 16px;
+        }
+        .fact-text p {
+            font-size: 1.05rem;
+            line-height: 1.5;
+            color: #4f3423;
+        }
+        .fact-icon {
+            flex: 1;
+            text-align: center;
+            font-size: 4rem;
+            background: #ffe2cd;
+            padding: 30px 15px;
+            border-radius: 48px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #f0ddcc;
+            margin-top: 30px;
+            color: #a27157;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 0 20px; }
+            .hero-card { width: 220px; }
+            .hero-img { width: 140px; height: 140px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="hero">
+        <span class="hero-badge"><i class="fas fa-leaf" style="margin-right: 8px;"></i> Ботанический детектив</span>
+        <h1>Земляника 🍓 vs Клубника</h1>
+        <div class="hero-sub">Сладкая путаница тысячелетий — как различить ягодных родственниц и почему все мы ошибаемся?</div>
+        
+        <div class="hero-img-grid">
+            <div class="hero-card">
+                <!-- Прямая ссылка на фото клубники (садовая земляника) -->
+                <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Strawberry_gariguette_DSC04158.jpg/800px-Strawberry_gariguette_DSC04158.jpg" alt="Клубника садовая">
+                <h3 class="straw-title">🍓 Клубника</h3>
+                <p style="margin-top: 6px;">Fragaria × ananassa<br>Садовая крупноплодная</p>
+            </div>
+            <div class="hero-card">
+                <!-- Прямая ссылка на фото лесной земляники -->
+                <img class="hero-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Fragaria_vesca_LC0166.jpg/800px-Fragaria_vesca_LC0166.jpg" alt="Лесная земляника">
+                <h3 class="wild-title">🌿 Земляника</h3>
+                <p style="margin-top: 6px;">Fragaria vesca<br>Лесная, мускатная, дикая</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">⚖️ 5 главных отличий</div>
+        <div class="section-desc">Разбираем внешность, вкус и характер — вы удивитесь, насколько разными бывают ягодки</div>
+        
+        <div class="compare-grid">
+            <div class="compare-card">
+                <div class="card-icon">🔬</div>
+                <h3>Внешний вид</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-apple-alt"></i> <strong>Клубника:</strong> Ярко-красная, крупная, блестящая, плотная, семена углублены в мякоть</li>
+                    <li><i class="fas fa-seedling"></i> <strong>Земляника:</strong> Меньше размером, от розового до бордового, семечки заметно выступают над поверхностью</li>
+                </ul>
+            </div>
+            <div class="compare-card">
+                <div class="card-icon">👃</div>
+                <h3>Аромат & вкус</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-star-of-life"></i> <strong>Клубника:</strong> Нежный, сладкий с лёгкой кислинкой, сильный "клубничный" аромат</li>
+                    <li><i class="fas fa-feather-alt"></i> <strong>Земляника:</strong> Медово-мускусный, невероятно душистый, чуть пряный — настоящий аромат летнего леса</li>
+                </ul>
+            </div>
+            <div class="compare-card">
+                <div class="card-icon">🌱</div>
+                <h3>Урожай & кусты</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-arrows-alt-h"></i> <strong>Клубника:</strong> Высокие цветоносы выше листьев, ягоды крупные, многие ремонтантные сорта</li>
+                    <li><i class="fas fa-tree"></i> <strong>Земляника:</strong> Цветоносы прячутся под листьями, ягоды мелкие, но зато невероятно ароматные и сладкие</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" style="padding-top: 0;">
+        <div class="comparison-table">
+            <div class="table-row">
+                <div class="table-label">🍬 Содержание сахара</div>
+                <div class="table-straw">Клубника: 4–7%</div>
+                <div class="table-wild">Земляника: 7–12% (слаще!)</div>
+            </div>
+            <div class="table-row">
+                <div class="table-label">🧬 Форма цветоложе</div>
+                <div class="table-straw">Конусовидная, круглая, иногда приплюснутая</div>
+                <div class="table-wild">Округлая или яйцевидная, более нежная</div>
+            </div>
+            <div class="table-row">
+                <div class="table-label">📅 Созревание</div>
+                <div class="table-straw">Июнь – август (сорта на любой вкус)</div>
+                <div class="table-wild">Конец июня – июль, короткий сезон</div>
+            </div>
+            <div class="table-row">
+                <div class="table-label">🌍 Происхождение</div>
+                <div class="table-straw">Гибрид виргинской и чилийской (Европа, XVIII век)</div>
+                <div class="table-wild">Исконно евразийские леса, известна с античности</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="fact-box">
+            <div class="fact-text">
+                <h3><i class="fas fa-brain"></i> Забавный факт</h3>
+                <p>🍓 С ботанической точки зрения и земляника, и клубника — вовсе не ягоды, а <strong>многоорешки</strong> (сочное цветоложе). А настоящие плоды — те самые мелкие зёрнышки на поверхности! <br><br>🌸 А знаете ли вы? «Клубника» в России — часто ошибочное название садовой земляники. Настоящая клубника (Fragaria moschata) имеет фиолетовый оттенок и мускусный аромат. Но в народе прижилось именно так: крупную ягоду все зовут клубникой, а дикую – земляникой.</p>
+            </div>
+            <div class="fact-icon">
+                <i class="fas fa-seedling" style="font-size: 3.5rem; color: #ad6847;"></i>
+                <p style="margin-top: 10px; font-weight: 600;">~200 семечек<br>на одной ягоде</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" style="padding-top: 0;">
+        <div style="background-color: #fff2e4; border-radius: 50px; overflow: hidden; display: flex; flex-wrap: wrap; box-shadow: 0 12px 20px -10px rgba(80,40,15,0.1);">
+            <div style="flex: 1; min-width: 200px; background: #ffe1cc; display: flex; align-items: center; justify-content: center; padding: 30px;">
+                <i class="fas fa-hand-peace" style="font-size: 4rem; color: #bc6f4b;"></i>
+                <i class="fas fa-hand-holding-heart" style="font-size: 4rem; margin-left: 15px; color: #9a5c3d;"></i>
+            </div>
+            <div style="flex: 2; padding: 30px 35px;">
+                <h3 style="font-family: 'Playfair Display'; font-size: 1.7rem;">Как не запутаться в магазине?</h3>
+                <p style="margin-top: 12px;">👉 Ищите размер: крупная, блестящая, с зелёной шапочкой — скорее всего <strong>садовая земляника (клубника по-народному)</strong>. Мелкая, невероятно душистая, часто с торчащими семечками — настоящая <strong>лесная земляника</strong>. Идеальный выбор для варенья — земляника, для десертов и украшений — крупная клубника.</p>
+                <p style="margin-top: 12px;"><i class="fas fa-check-circle" style="color: #c27757;"></i> Клубнику легче выращивать промышленно, а земляника — королева ароматов, но капризная.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><i class="fas fa-berry"></i> Создано с любовью к ягодам · вся информация основана на ботанических справочниках и наблюдениях садоводов</p>
+        <p style="margin-top: 8px; font-size: 0.8rem;">🍓 земляника мускатная vs ананасная клубника — главные герои лета</p>
+    </div>
+</div>
+</body>
+</html>
